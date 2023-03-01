@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Grid : MonoBehaviour
 {
+    [SerializeField]
+    private Transform startPosition;
+    [SerializeField]
+    private LayerMask wallMask;
+    [SerializeField]
+    private LayerMask waterMask;
+    [SerializeField]
+    private Vector2 worldSize;
+    [SerializeField]
+    private float nodeRadius;
+    [SerializeField]
+    private float distanceBetweenNodes;
 
-    public Transform startPosition;
-    public LayerMask wallMask;
-    public LayerMask waterMask;
-    public Vector2 worldSize;
-    public float nodeRadius;
-    public float distanceBetweenNodes;
-
-    Node[,] nodeArray;
+    public Node[,] nodeArray;
     public List<Node> FinalPath;
 
 
@@ -104,7 +109,7 @@ public class Grid : MonoBehaviour
     }
 
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmos() //it drains a lot when you have 20 of then
     {
 
         Gizmos.DrawWireCube(transform.position, new Vector3(worldSize.x, 1, worldSize.y));
@@ -121,7 +126,7 @@ public class Grid : MonoBehaviour
                 {
                     Gizmos.color = Color.blue;
                 }
-                if(!n.isNotWall)
+                if (!n.isNotWall)
                 {
                     Gizmos.color = Color.yellow;
                 }
