@@ -11,6 +11,8 @@ public class S_particlePlay : MonoBehaviour
     [SerializeField]
     private GameObject selfPosition;
     [SerializeField]
+    private GameObject collider;
+    [SerializeField]
     private ParticleSystem parti;
     [SerializeField]
     private GameObject mover;
@@ -25,23 +27,29 @@ public class S_particlePlay : MonoBehaviour
     }
     private void particleplay(GameObject human)
     {
-        if (human.Equals(self))
+
+        if (human.Equals(self))//for first infection
         {
             parti.Play();
             Destroy(mover);
             infected=true;
         }
+        if (human.Equals(collider)) //for zombie infections
+        {
+            parti.Play();
+            Destroy(mover);
+            infected = true;
+        }
     }
     private void Update()
     {
-        if (parti.isStopped && infected==true)
+        if (parti.isStopped && infected==true)//set a new zombie after infection
         {
             foreach(GameObject zombie in zombies)
             {
                 if (zombie.activeSelf == false)
                 {
                     zombieposition = zombie.transform.GetChild(2).gameObject;
-                    Debug.Log(zombieposition.name);
                     zombieposition.transform.position = selfPosition.transform.position;
                     zombie.SetActive(true);
                     break;
@@ -55,9 +63,11 @@ public class S_particlePlay : MonoBehaviour
     private void OnEnable()
     {
         S_InfectTouch.KillHuman += particleplay;
+        S_InfectRange.infect +=particleplay;    
     }
     private void OnDisable()
     {
-        S_InfectTouch.KillHuman += particleplay;
+        S_InfectTouch.KillHuman -= particleplay;
+        S_InfectRange.infect -= particleplay;
     }
 }

@@ -14,6 +14,10 @@ public class S_RandomMove : MonoBehaviour
     [SerializeField]
     private float maxTimer;
     private bool calm;
+    [SerializeField]
+    private GameObject humanCollider;
+    [SerializeField]
+    private GameObject zombie;
     void Start()
     {
         grid = GetComponent<Grid>();
@@ -60,8 +64,31 @@ public class S_RandomMove : MonoBehaviour
             changePath();
         }
     }
-    private void panic()
+    private void panic(GameObject target)
     {
-        calm = false;
+        if(target != null)
+        {
+            if (target.Equals(humanCollider))//for first infection
+            {
+                Debug.Log("human panic");
+                calm = false;
+                endpoint.transform.position = this.transform.position;
+            }
+            if (target.Equals(zombie)) //for zombie infections
+            {
+                Debug.Log("human chase");
+                calm = false;
+                endpoint.transform.position = this.transform.position;
+            }
+        }
+
+    }
+    private void OnEnable()
+    {
+        S_ChaseRange.startchase += panic;
+    }
+    private void OnDisable()
+    {
+        S_ChaseRange.startchase -= panic;
     }
 }
