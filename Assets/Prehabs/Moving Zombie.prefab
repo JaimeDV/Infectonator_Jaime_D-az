@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 194949929266249078}
   - component: {fileID: 194949929266249077}
   - component: {fileID: 194949929266249076}
+  - component: {fileID: 4012557641337916172}
   m_Layer: 3
   m_Name: Pathfinding Holder
   m_TagString: human
@@ -101,9 +102,24 @@ MonoBehaviour:
   endpoint: {fileID: 194949930285430610}
   timer: 0
   minTimer: 3
-  maxTimer: 12
+  maxTimer: 6
   humanCollider: {fileID: 0}
   zombie: {fileID: 790248109868119933}
+--- !u!114 &4012557641337916172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194949929266249074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45ed7654809197141b4bd8e0d4fac46d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  self: {fileID: 790248109868119933}
+  speed: 2
+  slowDownDistance: 0
 --- !u!1 &194949930285430610
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,7 +180,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &194949930352960215
 Transform:
   m_ObjectHideFlags: 0
@@ -214,7 +230,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7302298581624282409}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &4278433564584030900
 SphereCollider:
@@ -260,7 +276,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3051895374353841578
 Transform:
   m_ObjectHideFlags: 0
@@ -274,7 +290,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7302298581624282409}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &4769394519712491060
 SphereCollider:

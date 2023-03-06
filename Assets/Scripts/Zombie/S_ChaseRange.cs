@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// start chase behaviour in zombies
+/// </summary>
 public class S_ChaseRange : MonoBehaviour
 {
     private string humantag = "human";
@@ -10,11 +12,7 @@ public class S_ChaseRange : MonoBehaviour
     [SerializeField]
     private GameObject self;
     public static event System.Action<GameObject> startchase;
-    void Start()
-    {
-        
-    }
-
+  
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.transform.tag.Equals(humantag))
@@ -23,6 +21,7 @@ public class S_ChaseRange : MonoBehaviour
             startchase(self);
         }
     }
+    
     private void OnDrawGizmos()
     {
         if (sperecoll != null)
@@ -32,4 +31,5 @@ public class S_ChaseRange : MonoBehaviour
 
         }
     }
+    
 }

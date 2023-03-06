@@ -14,18 +14,17 @@ public class S_InfectRange : MonoBehaviour
         sperecoll = GetComponent<SphereCollider>();
     }
 
-    // Update is called once per frame
-    void Update()
+   
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.transform.tag.Equals(humantag))
+        Debug.Log("infect collision");
+        if (other.transform.tag.Equals(humantag))
         {
-            infect(collision.gameObject);
+            infect(other.gameObject);
         }
     }
+   
+
     private void OnDrawGizmos() {
         if (sperecoll != null)
         {
