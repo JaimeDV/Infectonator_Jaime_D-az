@@ -21,11 +21,10 @@ public class S_RandomMove : MonoBehaviour
     [SerializeField]
     private GameObject humanCollider;
 
-
     [SerializeField]
-    private GameObject zombie;
+    private GameObject self;
 
-    public static event System.Action<GameObject, GameObject> startChase;
+    public static event System.Action<GameObject, GameObject> startZombieChase;
 
     private void Start()
     {
@@ -74,44 +73,37 @@ public class S_RandomMove : MonoBehaviour
         }
     }
 
-    private void panic(GameObject target)//all get called , the zombie gets an empty target because it get itself
+    private void panic(GameObject target, GameObject zombie)//all get called , the zombie gets an empty target because it get itself
     {
-        Debug.Log("panic target"+target);
+        Debug.Log("panic!");
         if (target != null)
         {
-            if (target.Equals(humanCollider))//for first infection
+            if (self.Equals(target))//for humans
             {
                 calm = false;
                 endpoint.transform.position = this.transform.position;
             }
-            if (target.Equals(zombie)) //for zombie infections
+            if (self.Equals(zombie))
             {
                 calm = false;
                 endpoint.transform.position = this.transform.position;
-                Debug.Log(target);
-                startChase(humanCollider, target);
+                startZombieChase(target, zombie);
             }
+            
         }
     }
+
     private void relax(GameObject target)
     {
         if (target != null)
         {
-            if (target.Equals(humanCollider))//for humans 
-            {
-              
+           
                 calm = true;
-                
-            }
-            if (target.Equals(zombie)) //for zombies 
-            {
-               
-                calm = true;
-               
-            }
+
+            
+           
         }
     }
-
 
     private void OnEnable()
     {

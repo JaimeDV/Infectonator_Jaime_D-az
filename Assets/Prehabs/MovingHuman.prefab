@@ -103,8 +103,7 @@ MonoBehaviour:
   minTimer: 3
   maxTimer: 12
   humanCollider: {fileID: 4863772467464451868}
-  human: {fileID: 827603666332564608}
-  zombie: {fileID: 0}
+  self: {fileID: 4863772467464451868}
 --- !u!1 &827603665882688904
 GameObject:
   m_ObjectHideFlags: 0

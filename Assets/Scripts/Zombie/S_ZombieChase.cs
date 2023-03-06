@@ -7,14 +7,14 @@ public class S_ZombieChase : MonoBehaviour
     private bool chasing;
 
     private GameObject target;
-    private float steeps;
     private float timer;
-    private float startDelay;
+
 
     [SerializeField]
     private GameObject self;
 
-    private Vector3 startPosition;
+    [SerializeField]
+    private GameObject zombie;
 
     [SerializeField]
     private float speed;
@@ -51,10 +51,15 @@ public class S_ZombieChase : MonoBehaviour
 
     private void startchase(GameObject passTarget, GameObject zombie)
     {
-        Debug.Log("pass " + passTarget);
+        Debug.Log(passTarget);
+        Debug.Log(zombie);
+        Debug.Log(self);
         if (zombie.Equals(self))//only the zombie in range chases
         {
             chasing = true;
+
+            Debug.Log(passTarget.transform.position);
+
             target = passTarget;
         }
     }
@@ -65,9 +70,9 @@ public class S_ZombieChase : MonoBehaviour
         {
             timer += Time.deltaTime * speed;
             targetPosition = target.transform.position;
-            if (self.transform.position != targetPosition)
+            if (zombie.transform.position != targetPosition)
             {
-                Vector3 distance = (targetPosition - self.transform.position);
+                Vector3 distance = (targetPosition - zombie.transform.position);
 
                 Vector3 desiredVelocity = (distance.normalized * speed);
                 Vector3 steering = desiredVelocity - velocity;
@@ -77,7 +82,7 @@ public class S_ZombieChase : MonoBehaviour
                 float slowdownFactor = Mathf.Clamp01(distance.magnitude / slowDownDistance);
                 velocity *= slowdownFactor;
                 velocity.y = 0;//i don't know why it adds to the y axis
-                self.transform.position += velocity * Time.deltaTime;
+                zombie.transform.position += velocity * Time.deltaTime;
                 //player.transform.position = Vector3.Lerp(startPosition, cuarrentNodeDistance, timer);
             }
         }
@@ -85,11 +90,11 @@ public class S_ZombieChase : MonoBehaviour
 
     private void OnEnable()
     {
-        S_RandomMove.startChase += startchase;
+        S_RandomMove.startZombieChase += startchase;
     }
 
     private void OnDisable()
     {
-        S_RandomMove.startChase -= startchase;
+        S_RandomMove.startZombieChase -= startchase;
     }
 }

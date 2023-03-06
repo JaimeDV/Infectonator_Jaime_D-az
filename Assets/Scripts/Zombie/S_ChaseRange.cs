@@ -11,14 +11,14 @@ public class S_ChaseRange : MonoBehaviour
     private SphereCollider sperecoll;
     [SerializeField]
     private GameObject self;
-    public static event System.Action<GameObject> startchase;
+    public static event System.Action<GameObject, GameObject> startchase;
   
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.transform.tag.Equals(humantag))
         {
-            startchase(collision.gameObject);
-            startchase(self);
+            startchase(collision.gameObject, self);
+           
         }
     }
     

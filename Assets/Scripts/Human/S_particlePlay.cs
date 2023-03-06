@@ -33,11 +33,11 @@ public class S_particlePlay : MonoBehaviour
             parti.Play();
             Destroy(mover);
             infected=true;
-            Debug.Log("infection!");
+
         }
         if (human.Equals(collider)) //for zombie infections
         {
-            Debug.Log("infection!");
+
             parti.Play();
             Destroy(mover);
             infected = true;
