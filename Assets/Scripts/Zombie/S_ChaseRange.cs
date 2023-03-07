@@ -13,23 +13,15 @@ public class S_ChaseRange : MonoBehaviour
     private GameObject self;
     public static event System.Action<GameObject, GameObject> startchase;
   
-    private void OnCollisionEnter(Collision collision)
+    
+    private void OnTriggerEnter(Collider collision)
     {
+        Debug.Log(collision);
         if (collision.transform.tag.Equals(humantag))
         {
             startchase(collision.gameObject, self);
-           
-        }
-    }
-    
-    private void OnDrawGizmos()
-    {
-        if (sperecoll != null)
-        {
-            Gizmos.color = Color.gray;
-            Gizmos.DrawSphere(this.transform.position, sperecoll.radius);
 
         }
     }
-    
+
 }

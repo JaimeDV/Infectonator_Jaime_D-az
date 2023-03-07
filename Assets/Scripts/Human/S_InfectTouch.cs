@@ -24,16 +24,17 @@ public class S_InfectTouch : MonoBehaviour
         if (Physics.Raycast(ray, out hit, 100.0f))
         {
 
+       
         }
         if (first&& Input.GetMouseButton(0))
         {
             if (hit.transform.tag.Equals(humanTag))
             {
             human = hit.transform.gameObject;
-            
-            human = human.transform.parent.gameObject;
-            human = human.transform.parent.gameObject;//get to parent
-            KillHuman(human);
+          
+            human = human.transform.parent.gameObject;//get parent
+                human = human.transform.parent.gameObject;//get parent
+                KillHuman(human);
             
             first = false;
             }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 827603665839353393}
   - component: {fileID: 827603665839353395}
   - component: {fileID: 1427506252}
+  - component: {fileID: 8038077277426825225}
   m_Layer: 6
   m_Name: Pathfinding Holder
   m_TagString: human
@@ -84,6 +85,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 827603666332564608}
+  self: {fileID: 4863772467464451868}
   speed: 1
   slowDownDistance: 0
 --- !u!114 &1427506252
@@ -104,6 +106,22 @@ MonoBehaviour:
   maxTimer: 12
   humanCollider: {fileID: 4863772467464451868}
   self: {fileID: 4863772467464451868}
+--- !u!114 &8038077277426825225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827603665839353407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c1472c4acde26444a5f9ced0296d745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  self: {fileID: 4863772467464451868}
+  human: {fileID: 827603666332564608}
+  speed: 1
+  slowDownDistance: 0
 --- !u!1 &827603665882688904
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,7 +179,7 @@ GameObject:
   - component: {fileID: 6581871540200503559}
   m_Layer: 6
   m_Name: MovingHuman
-  m_TagString: Untagged
+  m_TagString: human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -278,14 +296,6 @@ PrefabInstance:
     - target: {fileID: 4863772467852884924, guid: 6e0f3fb0ce6b5dc43a9adab7366a832e, type: 3}
       propertyPath: m_Name
       value: Human
-      objectReference: {fileID: 0}
-    - target: {fileID: 7589109623944489876, guid: 6e0f3fb0ce6b5dc43a9adab7366a832e, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7589109623944489876, guid: 6e0f3fb0ce6b5dc43a9adab7366a832e, type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e0f3fb0ce6b5dc43a9adab7366a832e, type: 3}

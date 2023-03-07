@@ -27,7 +27,6 @@ public class S_particlePlay : MonoBehaviour
     }
     private void particleplay(GameObject human)
     {
-
         if (human.Equals(self))//for first infection
         {
             parti.Play();
@@ -37,7 +36,6 @@ public class S_particlePlay : MonoBehaviour
         }
         if (human.Equals(collider)) //for zombie infections
         {
-
             parti.Play();
             Destroy(mover);
             infected = true;

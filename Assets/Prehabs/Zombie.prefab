@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3130365330996867370}
   - component: {fileID: 4278433564584030900}
   - component: {fileID: 3885215858108966449}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ChaseRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 790248109868119933}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 8.270714
@@ -71,13 +71,13 @@ GameObject:
   - component: {fileID: 3051895374353841578}
   - component: {fileID: 4769394519712491060}
   - component: {fileID: 354749267925985735}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SpreadRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3051895374353841578
 Transform:
   m_ObjectHideFlags: 0
@@ -86,8 +86,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2049323422852810945}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.16, y: 0.21, z: 0}
+  m_LocalScale: {x: 0.76135, y: 0.76135, z: 0.76135}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7485651303711593037}
@@ -101,7 +101,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2049323422852810945}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 2.1468225
@@ -113,7 +113,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2049323422852810945}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6450e80daacc514795203e343c9ff1d, type: 3}
   m_Name: 
@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 7485651302991570615}
   - component: {fileID: 7485651302991570613}
   - component: {fileID: 7485651302991570612}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Paricles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4943,7 +4943,7 @@ GameObject:
   - component: {fileID: 7485651303711593036}
   - component: {fileID: 7485651303711593039}
   - component: {fileID: 7485651303711593038}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Zombie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5044,7 +5044,7 @@ GameObject:
   - component: {fileID: 7485651304227566368}
   - component: {fileID: 7485651304227566371}
   - component: {fileID: 7485651304227566370}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}

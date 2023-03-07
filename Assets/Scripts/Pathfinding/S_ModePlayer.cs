@@ -11,7 +11,8 @@ public class S_ModePlayer : MonoBehaviour
 
     [SerializeField]
     private GameObject player;
-
+    [SerializeField]
+    private GameObject self;
     private float steeps;
     private float timer;
     private float startDelay;
@@ -19,6 +20,7 @@ public class S_ModePlayer : MonoBehaviour
     private List<Node> finalPath;
     [SerializeField]
     private float speed;
+    private bool calm;
     [SerializeField]
     private float slowDownDistance;
     private Vector3 cuarrentNodeDistance;
@@ -26,6 +28,7 @@ public class S_ModePlayer : MonoBehaviour
 
     private void Start()
     {
+        calm = true;   
         grid = GetComponent<Grid>();
         finalPath=grid.FinalPath;
         CheckNode();
@@ -34,6 +37,8 @@ public class S_ModePlayer : MonoBehaviour
 
     private void Update()
     {
+        if (calm)
+        {
         startDelay++;
         startDelay += Time.deltaTime;
         if (startDelay > 5) {
@@ -42,6 +47,8 @@ public class S_ModePlayer : MonoBehaviour
             CheckNode();
         }
         MoveToTarget();
+
+        }
     }
 
     private void CheckNode()
@@ -89,12 +96,44 @@ public class S_ModePlayer : MonoBehaviour
     {
         startDelay=0;
     }
+    private void panic(GameObject target, GameObject zombie) { 
+
+        if (target != null)
+        {
+            if (self.Equals(target))//for humans
+            {
+                calm = false;
+                
+            }
+            if (self.Equals(zombie))
+            {
+                calm = false;
+
+            }
+
+        }
+    }
+    private void Relax(GameObject target)
+    {
+
+        if (target != null)
+        {
+            if (self.Equals(target))//for humans
+            {
+                calm = true;
+              
+            }
+
+        }
+    }
     private void OnEnable()
     {
-        
+        S_ChaseRange.startchase += panic;
+        S_ZombieChase.endchase += Relax;
     }
     private void OnDisable()
     {
-        
+        S_ChaseRange.startchase -= panic;
+        S_ZombieChase.endchase += Relax;
     }
 }

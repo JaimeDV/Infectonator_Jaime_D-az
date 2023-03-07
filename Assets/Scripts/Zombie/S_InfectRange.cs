@@ -25,12 +25,4 @@ public class S_InfectRange : MonoBehaviour
     }
    
 
-    private void OnDrawGizmos() {
-        if (sperecoll != null)
-        {
-        Gizmos.color = Color.green;
-        Gizmos.DrawSphere(this.transform.position,sperecoll.radius);
-
-        }
-    }
 }

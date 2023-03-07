@@ -1,20 +1,20 @@
 using UnityEngine;
 
-public class S_ZombieChase : MonoBehaviour
-{/// <summary>
-/// chase behaviour in zombies
+/// <summary>
+/// panic behaviour in humans
 /// </summary>
-    private bool chasing;
+public class S_PanicHuman : MonoBehaviour
+{
+    private bool chased;
 
     private GameObject target;
     private float timer;
-
 
     [SerializeField]
     private GameObject self;
 
     [SerializeField]
-    private GameObject zombie;
+    private GameObject human;
 
     [SerializeField]
     private float speed;
@@ -26,21 +26,20 @@ public class S_ZombieChase : MonoBehaviour
     private Vector3 velocity;
 
     public static event System.Action<GameObject> endchase;
-
     private void Start()
     {
-        chasing = false;
+        chased = false;
     }
 
     // Update is called once per frame
     private void Update()
     {
-        if (chasing)
+        if (chased)
         {
-            if (target != null)
+            if(target != null)
             {
-                Debug.Log("chasing");
-                ChaseTarget(target);
+            AvoidTarget(target);
+
             }
             else
             {
@@ -51,25 +50,31 @@ public class S_ZombieChase : MonoBehaviour
 
     private void startchase(GameObject passTarget, GameObject zombie)
     {
-
-       
-        if (zombie.Equals(self))//only the zombie in range chases
+      
+        if (passTarget.Equals(self))//only the human in range runs
         {
-            chasing = true;
-            target = passTarget;
+            chased = true;
+
+            Debug.Log(passTarget.transform.position);
+
+            target = zombie;
         }
     }
 
-    private void ChaseTarget(GameObject target)
+    private void AvoidTarget(GameObject target)
     {
+
         if (target != null)
         {
+            Debug.Log("human panic!");
+            Debug.Log(target);
+            Debug.Log(target.transform.position);
             timer += Time.deltaTime * speed;
             targetPosition = target.transform.position;
-            if (zombie.transform.position != targetPosition)
+            if (human.transform.position != targetPosition)
             {
-                Vector3 distance = (targetPosition - zombie.transform.position);
-                
+                Vector3 distance = (targetPosition - human.transform.position);
+
                 Vector3 desiredVelocity = (distance.normalized * speed);
                 Vector3 steering = desiredVelocity - velocity;
 
@@ -78,8 +83,9 @@ public class S_ZombieChase : MonoBehaviour
                 float slowdownFactor = Mathf.Clamp01(distance.magnitude / slowDownDistance);
                 velocity *= slowdownFactor;
                 velocity.y = 0;//i don't know why it adds to the y axis
-                zombie.transform.position += velocity * Time.deltaTime;
-                //player.transform.position = Vector3.Lerp(startPosition, cuarrentNodeDistance, timer);
+                
+                human.transform.position -= velocity * Time.deltaTime;
+
             }
         }
     }

@@ -73,9 +73,9 @@ public class S_RandomMove : MonoBehaviour
         }
     }
 
-    private void panic(GameObject target, GameObject zombie)//all get called , the zombie gets an empty target because it get itself
+    private void Panic(GameObject target, GameObject zombie)//all get called , the zombie gets an empty target because it get itself
     {
-        Debug.Log("panic!");
+
         if (target != null)
         {
             if (self.Equals(target))//for humans
@@ -93,27 +93,28 @@ public class S_RandomMove : MonoBehaviour
         }
     }
 
-    private void relax(GameObject target)
+    private void Relax(GameObject target)
     {
+
         if (target != null)
         {
-           
+            if (self.Equals(target))//for humans
+            {
                 calm = true;
+              
+            }
 
-            
-           
         }
     }
-
     private void OnEnable()
     {
-        S_ChaseRange.startchase += panic;
-        S_ZombieChase.endchase += relax;
+        S_ChaseRange.startchase += Panic;
+        S_ZombieChase.endchase += Relax;
     }
 
     private void OnDisable()
     {
-        S_ChaseRange.startchase -= panic;
-        S_ZombieChase.endchase += relax;
+        S_ChaseRange.startchase -= Panic;
+        S_ZombieChase.endchase -= Relax;
     }
 }

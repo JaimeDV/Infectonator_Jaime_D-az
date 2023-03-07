@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 194949929266249077}
   - component: {fileID: 194949929266249076}
   - component: {fileID: 4012557641337916172}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Pathfinding Holder
-  m_TagString: human
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,6 +85,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 7302298581624282407}
+  self: {fileID: 595354304021952537}
   speed: 2
   slowDownDistance: 0
 --- !u!114 &194949929266249076
@@ -119,7 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   self: {fileID: 595354304021952537}
   zombie: {fileID: 7302298581624282407}
-  speed: 2
+  speed: 1.25
   slowDownDistance: 0
 --- !u!1 &194949930285430610
 GameObject:
@@ -131,9 +132,9 @@ GameObject:
   m_Component:
   - component: {fileID: 194949930285430611}
   - component: {fileID: 194949930285430612}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: EndPoint
-  m_TagString: human
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -175,7 +176,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 194949930352960215}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Moving Zombie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,29 +208,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 194949930352960215}
     m_Modifications:
-    - target: {fileID: 2049323422852810945, guid: dca7ef83826faac4ead5c7cca1e4d1d4, type: 3}
-      propertyPath: m_IsActive
+    - target: {fileID: 354749267925985735, guid: dca7ef83826faac4ead5c7cca1e4d1d4, type: 3}
+      propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3051895374353841578, guid: dca7ef83826faac4ead5c7cca1e4d1d4, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.76135
-      objectReference: {fileID: 0}
-    - target: {fileID: 3051895374353841578, guid: dca7ef83826faac4ead5c7cca1e4d1d4, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.76135
-      objectReference: {fileID: 0}
-    - target: {fileID: 3051895374353841578, guid: dca7ef83826faac4ead5c7cca1e4d1d4, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.76135
-      objectReference: {fileID: 0}
-    - target: {fileID: 3051895374353841578, guid: dca7ef83826faac4ead5c7cca1e4d1d4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.16
-      objectReference: {fileID: 0}
-    - target: {fileID: 3051895374353841578, guid: dca7ef83826faac4ead5c7cca1e4d1d4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.21
       objectReference: {fileID: 0}
     - target: {fileID: 7485651303711593027, guid: dca7ef83826faac4ead5c7cca1e4d1d4, type: 3}
       propertyPath: m_Name
