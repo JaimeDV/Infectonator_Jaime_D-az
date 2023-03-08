@@ -43,6 +43,8 @@ public class S_particlePlay : MonoBehaviour
     }
     private void Update()
     {
+        if (!parti.isPlaying)
+        {
         if (parti.isStopped && infected==true)//set a new zombie after infection
         {
             foreach(GameObject zombie in zombies)
@@ -58,6 +60,8 @@ public class S_particlePlay : MonoBehaviour
             }
 
             Destroy(self);
+        }
+
         }
     }
     private void OnEnable()

@@ -19,7 +19,7 @@ public class S_HumanPanicRange : MonoBehaviour
         
         if (collision.transform.tag.Equals(zombietag))
         {
-            Debug.Log("runing");
+         
             if (self != null && startchase!=null)
             {
             startchase(self, collision.gameObject);
@@ -30,11 +30,14 @@ public class S_HumanPanicRange : MonoBehaviour
     }
     private void OnCollisionExit(Collision collision)
     {
+       
         if (collision.transform.tag.Equals(zombietag))
         {
-            if(self != null&& endchase!=null)
+           
+            if (self != null&& endchase!=null)
             {
-            endchase(self);
+                Debug.Log("back to normal");
+                endchase(self);
 
             }
 

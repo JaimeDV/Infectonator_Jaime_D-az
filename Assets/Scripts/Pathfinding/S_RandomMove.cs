@@ -112,6 +112,7 @@ public class S_RandomMove : MonoBehaviour
         S_ChaseRange.startchase += Panic;
         S_ZombieChase.endchase += Relax;
         S_PanicHuman.endchase += Relax;
+        S_HumanPanicRange.endchase += Relax;
     }
 
     private void OnDisable()
@@ -119,5 +120,6 @@ public class S_RandomMove : MonoBehaviour
         S_ChaseRange.startchase -= Panic;
         S_ZombieChase.endchase -= Relax;
         S_PanicHuman.endchase -= Relax;
+        S_HumanPanicRange.endchase -= Relax;
     }
 }
