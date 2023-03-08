@@ -34,6 +34,7 @@ public class S_RandomMove : MonoBehaviour
 
     private void Update()
     {
+
         if (calm)
         {
             timer -= 1 * Time.deltaTime;
@@ -110,11 +111,13 @@ public class S_RandomMove : MonoBehaviour
     {
         S_ChaseRange.startchase += Panic;
         S_ZombieChase.endchase += Relax;
+        S_PanicHuman.endchase += Relax;
     }
 
     private void OnDisable()
     {
         S_ChaseRange.startchase -= Panic;
         S_ZombieChase.endchase -= Relax;
+        S_PanicHuman.endchase -= Relax;
     }
 }

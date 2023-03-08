@@ -9,7 +9,10 @@ public class S_PanicHuman : MonoBehaviour
 
     private GameObject target;
     private float timer;
-
+    [SerializeField]
+    private GameObject test;
+    [SerializeField]
+    private GameObject endpoint;
     [SerializeField]
     private GameObject self;
 
@@ -34,43 +37,54 @@ public class S_PanicHuman : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+
         if (chased)
         {
+            Debug.Log(target);
             if(target != null)
             {
-            AvoidTarget(target);
-
+              
+                AvoidTarget(target);
             }
             else
             {
+                Debug.Log("chase end");
+                chased = false;
                 endchase(self);
             }
         }
     }
 
-    private void startchase(GameObject passTarget, GameObject zombie)
+    private void startRunning(GameObject passTarget, GameObject zombie)
     {
-      
-        if (passTarget.Equals(self))//only the human in range runs
+        if ( passTarget.Equals(self))//only the human in range runs
         {
+            Debug.Log("human running");
             chased = true;
-
-            Debug.Log(passTarget.transform.position);
-
             target = zombie;
         }
     }
+    private void Endchase(GameObject passTarget)
+    {
+
+        if (chased == true && passTarget.Equals(self))//only the human in range runs
+        {
+            chased = false;
+            target = null;
+        }
+    }
+
 
     private void AvoidTarget(GameObject target)
     {
 
         if (target != null)
         {
-            Debug.Log("human panic!");
-            Debug.Log(target);
-            Debug.Log(target.transform.position);
+          
+            
             timer += Time.deltaTime * speed;
             targetPosition = target.transform.position;
+            
             if (human.transform.position != targetPosition)
             {
                 Vector3 distance = (targetPosition - human.transform.position);
@@ -83,20 +97,25 @@ public class S_PanicHuman : MonoBehaviour
                 float slowdownFactor = Mathf.Clamp01(distance.magnitude / slowDownDistance);
                 velocity *= slowdownFactor;
                 velocity.y = 0;//i don't know why it adds to the y axis
-                
-                human.transform.position -= velocity * Time.deltaTime;
 
+                endpoint.transform.position -= velocity * Time.deltaTime;
+                
             }
         }
     }
 
     private void OnEnable()
     {
-        S_RandomMove.startZombieChase += startchase;
+        //S_RandomMove.startZombieChase += startRunning;
+        S_HumanPanicRange.startchase += startRunning;
+        S_HumanPanicRange.endchase += Endchase; 
     }
 
     private void OnDisable()
     {
-        S_RandomMove.startZombieChase -= startchase;
+        //S_RandomMove.startZombieChase -= startRunning;
+        S_HumanPanicRange.startchase -= startRunning;
+        S_HumanPanicRange.endchase -= Endchase; 
     }
+  
 }

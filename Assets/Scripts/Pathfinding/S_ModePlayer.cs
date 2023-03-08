@@ -22,6 +22,8 @@ public class S_ModePlayer : MonoBehaviour
     private float speed;
     private bool calm;
     [SerializeField]
+    private bool human;
+    [SerializeField]
     private float slowDownDistance;
     private Vector3 cuarrentNodeDistance;
     private Vector3 velocity;
@@ -37,6 +39,7 @@ public class S_ModePlayer : MonoBehaviour
 
     private void Update()
     {
+       
         if (calm)
         {
         startDelay++;
@@ -48,6 +51,13 @@ public class S_ModePlayer : MonoBehaviour
         }
         MoveToTarget();
 
+        }
+        else if (human)
+        {
+            grid = GetComponent<Grid>();
+            finalPath = grid.FinalPath;
+            CheckNode();
+            MoveToTarget();
         }
     }
 
@@ -96,6 +106,10 @@ public class S_ModePlayer : MonoBehaviour
     {
         startDelay=0;
     }
+    public void setEndpoint()
+    {
+
+    }
     private void panic(GameObject target, GameObject zombie) { 
 
         if (target != null)
@@ -118,6 +132,7 @@ public class S_ModePlayer : MonoBehaviour
 
         if (target != null)
         {
+        
             if (self.Equals(target))//for humans
             {
                 calm = true;
@@ -129,11 +144,16 @@ public class S_ModePlayer : MonoBehaviour
     private void OnEnable()
     {
         S_ChaseRange.startchase += panic;
+        S_ChaseRange.endchase += panic;
         S_ZombieChase.endchase += Relax;
+        S_PanicHuman.endchase += Relax;
     }
     private void OnDisable()
     {
+        S_ChaseRange.endchase -= panic;
         S_ChaseRange.startchase -= panic;
-        S_ZombieChase.endchase += Relax;
+        S_ZombieChase.endchase -= Relax;
+        S_PanicHuman.endchase -= Relax;
+
     }
 }

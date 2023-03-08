@@ -9,13 +9,17 @@ public class S_ZombieChase : MonoBehaviour
     private GameObject target;
     private float timer;
 
-
+   
+    [SerializeField]
+    private Grid grid;
     [SerializeField]
     private GameObject self;
 
     [SerializeField]
     private GameObject zombie;
 
+    [SerializeField]
+    private float nodeAprox;//how close should be a object to a node to be considered in it
     [SerializeField]
     private float speed;
 
@@ -32,15 +36,15 @@ public class S_ZombieChase : MonoBehaviour
         chasing = false;
     }
 
-    // Update is called once per frame
+  
     private void Update()
     {
+       
         if (chasing)
         {
             if (target != null)
             {
-                Debug.Log("chasing");
-                ChaseTarget(target);
+                FindNode(target);
             }
             else
             {
@@ -51,8 +55,7 @@ public class S_ZombieChase : MonoBehaviour
 
     private void startchase(GameObject passTarget, GameObject zombie)
     {
-
-       
+ 
         if (zombie.Equals(self))//only the zombie in range chases
         {
             chasing = true;
@@ -60,16 +63,15 @@ public class S_ZombieChase : MonoBehaviour
         }
     }
 
-    private void ChaseTarget(GameObject target)
+    private void ChaseTarget(Vector3 target)
     {
         if (target != null)
         {
-            timer += Time.deltaTime * speed;
-            targetPosition = target.transform.position;
-            if (zombie.transform.position != targetPosition)
+
+            if (zombie.transform.position != target)
             {
-                Vector3 distance = (targetPosition - zombie.transform.position);
-                
+                Vector3 distance = (target - zombie.transform.position);
+
                 Vector3 desiredVelocity = (distance.normalized * speed);
                 Vector3 steering = desiredVelocity - velocity;
 
@@ -79,11 +81,36 @@ public class S_ZombieChase : MonoBehaviour
                 velocity *= slowdownFactor;
                 velocity.y = 0;//i don't know why it adds to the y axis
                 zombie.transform.position += velocity * Time.deltaTime;
-                //player.transform.position = Vector3.Lerp(startPosition, cuarrentNodeDistance, timer);
+
             }
+
         }
     }
+    private void FindNode(GameObject target)
+    {
+        //Instantiate(test, target.transform.position, Quaternion.identity);
+        foreach (Node node in grid.nodeArray)
+        {
 
+            //Vector3 distance = (target.transform.position - node.position);
+            //Debug.Log(distance);
+            //distance += nodeAprox;
+            //getMagnitued(distance);
+            //Debug.Log(Vector3.Distance(distance, node.position));
+         
+            if (Vector3.Distance(target.transform.position, node.position)<nodeAprox && node.isNotWall)
+            {
+
+                //target.transform.position= node.position;
+                ChaseTarget(node.position);
+                break;
+            }
+            
+        }
+
+        endchase(self);
+    }
+   
     private void OnEnable()
     {
         S_RandomMove.startZombieChase += startchase;

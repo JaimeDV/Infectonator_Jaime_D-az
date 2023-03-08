@@ -12,14 +12,23 @@ public class S_ChaseRange : MonoBehaviour
     [SerializeField]
     private GameObject self;
     public static event System.Action<GameObject, GameObject> startchase;
-  
-    
+    public static event System.Action<GameObject, GameObject> endchase;
+
+
     private void OnTriggerEnter(Collider collision)
     {
-        Debug.Log(collision);
+     
         if (collision.transform.tag.Equals(humantag))
         {
             startchase(collision.gameObject, self);
+
+        }
+    }
+    private void OnTriggerExit(Collider collision)
+    {
+        if (collision.transform.tag.Equals(humantag))
+        {
+            endchase(collision.gameObject, self);
 
         }
     }
