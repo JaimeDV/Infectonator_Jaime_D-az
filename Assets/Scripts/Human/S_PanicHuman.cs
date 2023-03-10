@@ -40,7 +40,6 @@ public class S_PanicHuman : MonoBehaviour
 
         if (chased)
         {
-            Debug.Log(target);
             if(target != null)
             {
               
@@ -48,7 +47,6 @@ public class S_PanicHuman : MonoBehaviour
             }
             else
             {
-                Debug.Log("chase end");
                 chased = false;
                 endchase(self);
             }
@@ -59,7 +57,6 @@ public class S_PanicHuman : MonoBehaviour
     {
         if ( passTarget.Equals(self))//only the human in range runs
         {
-            Debug.Log("human running");
             chased = true;
             target = zombie;
         }
@@ -91,7 +88,7 @@ public class S_PanicHuman : MonoBehaviour
 
                 Vector3 desiredVelocity = (distance.normalized * speed);
                 Vector3 steering = desiredVelocity - velocity;
-
+               
                 velocity += steering * Time.deltaTime;
 
                 float slowdownFactor = Mathf.Clamp01(distance.magnitude / slowDownDistance);
@@ -107,15 +104,15 @@ public class S_PanicHuman : MonoBehaviour
     private void OnEnable()
     {
         //S_RandomMove.startZombieChase += startRunning;
-        S_HumanPanicRange.startchase += startRunning;
-        S_HumanPanicRange.endchase += Endchase; 
+        S_HumanPanicRange.zombieEnter += startRunning;
+        S_HumanPanicRange.zombieExit += Endchase; 
     }
 
     private void OnDisable()
     {
         //S_RandomMove.startZombieChase -= startRunning;
-        S_HumanPanicRange.startchase -= startRunning;
-        S_HumanPanicRange.endchase -= Endchase; 
+        S_HumanPanicRange.zombieEnter -= startRunning;
+        S_HumanPanicRange.zombieExit -= Endchase; 
     }
   
 }

@@ -24,6 +24,9 @@ public class S_RandomMove : MonoBehaviour
     [SerializeField]
     private GameObject self;
 
+    [SerializeField]
+    private GameObject radious;
+
     public static event System.Action<GameObject, GameObject> startZombieChase;
 
     private void Start()
@@ -83,6 +86,7 @@ public class S_RandomMove : MonoBehaviour
             {
                 calm = false;
                 endpoint.transform.position = this.transform.position;
+
             }
             if (self.Equals(zombie))
             {
@@ -96,11 +100,12 @@ public class S_RandomMove : MonoBehaviour
 
     private void Relax(GameObject target)
     {
-
+     
         if (target != null)
         {
-            if (self.Equals(target))//for humans
+            if (radious.Equals(target))//for humans
             {
+           
                 calm = true;
               
             }
@@ -109,17 +114,17 @@ public class S_RandomMove : MonoBehaviour
     }
     private void OnEnable()
     {
-        S_ChaseRange.startchase += Panic;
+        S_ChaseRange.enterRange += Panic;
         S_ZombieChase.endchase += Relax;
         S_PanicHuman.endchase += Relax;
-        S_HumanPanicRange.endchase += Relax;
+        S_HumanPanicRange.zombieExit += Relax;
     }
 
     private void OnDisable()
     {
-        S_ChaseRange.startchase -= Panic;
+        S_ChaseRange.enterRange -= Panic;
         S_ZombieChase.endchase -= Relax;
         S_PanicHuman.endchase -= Relax;
-        S_HumanPanicRange.endchase -= Relax;
+        S_HumanPanicRange.zombieExit -= Relax;
     }
 }

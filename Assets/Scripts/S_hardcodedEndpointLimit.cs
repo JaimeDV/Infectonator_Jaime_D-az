@@ -21,7 +21,7 @@ public class S_hardcodedEndpointLimit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (endpoint.transform.position.x > horizontalLimit.x)//x positive y negative
+        if (endpoint.transform.position.x > horizontalLimit.x)
         {
             endpoint.transform.position= new Vector3(horizontalLimit.x, endpoint.transform.position.y, endpoint.transform.position.z);
         }
@@ -29,13 +29,13 @@ public class S_hardcodedEndpointLimit : MonoBehaviour
         {
             endpoint.transform.position = new Vector3(horizontalLimit.y, endpoint.transform.position.y, endpoint.transform.position.z);
         }
-        if (endpoint.transform.position.z > verticalLimit.x)//x positive y negative
+        if (endpoint.transform.position.z > verticalLimit.x)
         {
-            endpoint.transform.position = new Vector3(endpoint.transform.position.y, endpoint.transform.position.y, verticalLimit.x);
+            endpoint.transform.position = new Vector3(endpoint.transform.position.x, endpoint.transform.position.y, verticalLimit.x);
         }
-        if (endpoint.transform.position.z < verticalLimit.y)//x positive y negative
+        if (endpoint.transform.position.z < verticalLimit.y)
         {
-            endpoint.transform.position = new Vector3(endpoint.transform.position.y, endpoint.transform.position.y, verticalLimit.y);
+            endpoint.transform.position = new Vector3(endpoint.transform.position.x, endpoint.transform.position.y, verticalLimit.y);
         }
     }
 }

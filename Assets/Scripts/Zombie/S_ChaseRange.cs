@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
+using UnityEngine.UIElements.Experimental;
 /// <summary>
 /// start chase behaviour in zombies
 /// </summary>
@@ -11,16 +13,16 @@ public class S_ChaseRange : MonoBehaviour
     private SphereCollider sperecoll;
     [SerializeField]
     private GameObject self;
-    public static event System.Action<GameObject, GameObject> startchase;
-    public static event System.Action<GameObject, GameObject> endchase;
-
+    public static event System.Action<GameObject, GameObject> enterRange;
+    public static event System.Action<GameObject, GameObject> exitRange;
+    public static event System.Action<GameObject, GameObject> remainRange;
 
     private void OnTriggerEnter(Collider collision)
     {
      
         if (collision.transform.tag.Equals(humantag))
         {
-            startchase(collision.gameObject, self);
+            enterRange(collision.gameObject, self);
 
         }
     }
@@ -28,7 +30,16 @@ public class S_ChaseRange : MonoBehaviour
     {
         if (collision.transform.tag.Equals(humantag))
         {
-            endchase(collision.gameObject, self);
+            //exitRange(collision.gameObject, self);
+
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.transform.tag.Equals(humantag))
+        {
+            remainRange(other.gameObject, self);
 
         }
     }

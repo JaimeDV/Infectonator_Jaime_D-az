@@ -9,7 +9,9 @@ public class S_ZombieChase : MonoBehaviour
     private GameObject target;
     private float timer;
 
-   
+    //[SerializeField]
+    //private GameObject test;
+
     [SerializeField]
     private Grid grid;
     [SerializeField]
@@ -42,9 +44,10 @@ public class S_ZombieChase : MonoBehaviour
        
         if (chasing)
         {
+            Debug.Log(this.gameObject.transform.parent + "  " + target);
             if (target != null)
             {
-                FindNode(target);
+                ChaseTarget(target.transform.position);
             }
             else
             {
@@ -55,11 +58,14 @@ public class S_ZombieChase : MonoBehaviour
 
     private void startchase(GameObject passTarget, GameObject zombie)
     {
- 
-        if (zombie.Equals(self))//only the zombie in range chases
+        if (target == null)
         {
-            chasing = true;
-            target = passTarget;
+            if (zombie.Equals(self))//only the zombie in range chases
+            {
+                chasing = true;
+                target = passTarget;
+            }
+
         }
     }
 
@@ -100,7 +106,7 @@ public class S_ZombieChase : MonoBehaviour
          
             if (Vector3.Distance(target.transform.position, node.position)<nodeAprox && node.isNotWall)
             {
-
+                //Instantiate(test, target.transform.position, Quaternion.identity);
                 //target.transform.position= node.position;
                 ChaseTarget(node.position);
                 break;
@@ -108,16 +114,19 @@ public class S_ZombieChase : MonoBehaviour
             
         }
 
+
         endchase(self);
     }
    
     private void OnEnable()
     {
         S_RandomMove.startZombieChase += startchase;
+        S_ChaseRange.remainRange += startchase;
     }
 
     private void OnDisable()
     {
         S_RandomMove.startZombieChase -= startchase;
+        S_ChaseRange.remainRange += startchase;
     }
 }

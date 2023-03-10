@@ -107,10 +107,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7109202074068847374}
   - component: {fileID: 1981105853343376898}
-  - component: {fileID: 3584151159956735529}
+  - component: {fileID: 4662470674007559031}
   m_Layer: 6
-  m_Name: Friend Panic Radious
-  m_TagString: human
+  m_Name: human Panic Radious
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,9 +141,9 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.8558779
-  m_Center: {x: -0.008269668, y: 0, z: 0}
---- !u!114 &3584151159956735529
+  m_Radius: 1.5145836
+  m_Center: {x: -0.008269643, y: 0, z: 0.0026693617}
+--- !u!114 &4662470674007559031
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,9 +152,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 384873202037490387}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f42ae3767ea216246a5048c71d007d21, type: 3}
+  m_Script: {fileID: 11500000, guid: 649388bfcc18a9046917928894818bbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sperecoll: {fileID: 1981105853343376898}
+  self: {fileID: 384873202037490387}
 --- !u!1 &827603665948323872
 GameObject:
   m_ObjectHideFlags: 0

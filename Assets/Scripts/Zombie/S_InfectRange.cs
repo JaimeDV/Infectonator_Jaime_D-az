@@ -17,12 +17,12 @@ public class S_InfectRange : MonoBehaviour
    
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject);
+      
         if (other.transform.tag.Equals(humantag))
         {
             infect(other.gameObject);
         }
     }
-   
 
+   
 }

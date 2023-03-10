@@ -1937,7 +1937,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &546521707
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3925,7 +3925,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -6225,6 +6225,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 831215917}
     m_Modifications:
+    - target: {fileID: 827603665839353407, guid: df9fc068d694d1d438c62fad6fdf8b4b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2487602491899647225, guid: df9fc068d694d1d438c62fad6fdf8b4b, type: 3}
       propertyPath: m_Name
       value: MovingHuman (1)

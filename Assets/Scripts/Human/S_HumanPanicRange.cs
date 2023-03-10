@@ -9,39 +9,68 @@ public class S_HumanPanicRange : MonoBehaviour
     private SphereCollider sperecoll;
     [SerializeField]
     private GameObject self;
-    public static event System.Action<GameObject, GameObject> startchase;
-    public static event System.Action<GameObject> endchase;
+    public static event System.Action<GameObject, GameObject> zombieEnter;
+    public static event System.Action<GameObject> zombieExit;
 
 
    
-    private void OnCollisionEnter(Collision collision)
-    {
+    //private void OnCollisionEnter(Collision collision)
+    //{
         
-        if (collision.transform.tag.Equals(zombietag))
-        {
+    //    if (collision.transform.tag.Equals(zombietag))
+    //    {
          
-            if (self != null && startchase!=null)
+    //        if (self != null && zombieEnter!=null)
+    //        {
+    //        zombieEnter(self, collision.gameObject);
+
+    //        }
+
+    //    }
+    //}
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.tag.Equals(zombietag))
+        {
+
+            if (self != null && zombieEnter != null)
             {
-            startchase(self, collision.gameObject);
+                zombieEnter(self, other.gameObject);
 
             }
 
         }
     }
-    private void OnCollisionExit(Collision collision)
+
+    private void OnTriggerExit(Collider other)
     {
-       
-        if (collision.transform.tag.Equals(zombietag))
+
+        if (other.transform.tag.Equals(zombietag))
         {
-           
-            if (self != null&& endchase!=null)
+
+            if (self != null && zombieExit != null)
             {
                 Debug.Log("back to normal");
-                endchase(self);
+                //zombieExit(self);
 
             }
 
         }
     }
+    //private void OnCollisionExit(Collision collision)
+    //{
+       
+    //    if (collision.transform.tag.Equals(zombietag))
+    //    {
+           
+    //        if (self != null&& zombieExit!=null)
+    //        {
+    //            Debug.Log("back to normal");
+    //            //zombieExit(self);
+
+    //        }
+
+    //    }
+    //}
    
 }

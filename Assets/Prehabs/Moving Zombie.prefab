@@ -86,7 +86,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 7302298581624282407}
   self: {fileID: 595354304021952537}
-  speed: 0.5
+  speed: 1
   human: 0
   slowDownDistance: 0
 --- !u!114 &194949929266249076
@@ -103,10 +103,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endpoint: {fileID: 194949930285430610}
   timer: 0
-  minTimer: 3
-  maxTimer: 6
+  minTimer: 6
+  maxTimer: 8
   humanCollider: {fileID: 0}
   self: {fileID: 595354304021952537}
+  radious: {fileID: 595354304021952537}
 --- !u!114 &4012557641337916172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,7 +124,7 @@ MonoBehaviour:
   self: {fileID: 595354304021952537}
   zombie: {fileID: 7302298581624282407}
   nodeAprox: 0.1
-  speed: 0.5
+  speed: 1
   slowDownDistance: 0
 --- !u!1 &194949930285430610
 GameObject:
@@ -211,14 +212,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 194949930352960215}
     m_Modifications:
-    - target: {fileID: 354749267925985735, guid: dca7ef83826faac4ead5c7cca1e4d1d4, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2049323422852810945, guid: dca7ef83826faac4ead5c7cca1e4d1d4, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7485651303711593027, guid: dca7ef83826faac4ead5c7cca1e4d1d4, type: 3}
       propertyPath: m_Name
       value: Zombie
@@ -266,10 +259,6 @@ PrefabInstance:
     - target: {fileID: 7485651303711593037, guid: dca7ef83826faac4ead5c7cca1e4d1d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8851141913526116092, guid: dca7ef83826faac4ead5c7cca1e4d1d4, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dca7ef83826faac4ead5c7cca1e4d1d4, type: 3}

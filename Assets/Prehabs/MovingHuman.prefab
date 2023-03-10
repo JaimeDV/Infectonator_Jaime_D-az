@@ -107,6 +107,7 @@ MonoBehaviour:
   maxTimer: 7
   humanCollider: {fileID: 4863772467464451868}
   self: {fileID: 4863772467464451868}
+  radious: {fileID: 5572345061408048623}
 --- !u!114 &8038077277426825225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,12 +270,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 6179404535241326725}
     m_Modifications:
     - target: {fileID: 384873202037490387, guid: 6e0f3fb0ce6b5dc43a9adab7366a832e, type: 3}
-      propertyPath: m_Name
-      value: human Panic Radious
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1981105853343376898, guid: 6e0f3fb0ce6b5dc43a9adab7366a832e, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4863772467852884920, guid: 6e0f3fb0ce6b5dc43a9adab7366a832e, type: 3}
       propertyPath: m_RootOrder
@@ -349,24 +350,5 @@ GameObject:
 --- !u!1 &5572345061408048623 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 384873202037490387, guid: 6e0f3fb0ce6b5dc43a9adab7366a832e, type: 3}
-  m_PrefabInstance: {fileID: 5189178576831907644}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4662470674007559031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5572345061408048623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 649388bfcc18a9046917928894818bbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sperecoll: {fileID: 6016218848818667838}
-  self: {fileID: 5572345061408048623}
---- !u!135 &6016218848818667838 stripped
-SphereCollider:
-  m_CorrespondingSourceObject: {fileID: 1981105853343376898, guid: 6e0f3fb0ce6b5dc43a9adab7366a832e, type: 3}
   m_PrefabInstance: {fileID: 5189178576831907644}
   m_PrefabAsset: {fileID: 0}
