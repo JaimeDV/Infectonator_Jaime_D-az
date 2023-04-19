@@ -23,7 +23,7 @@ public class ConditionWaitSeconds : ICondition
     }
     void Update()
     {
-        Debug.Log(timer);
+        //Debug.Log(timer);
         if (particles != null&& particles.isPlaying)
         {
             timer -= Time.deltaTime;

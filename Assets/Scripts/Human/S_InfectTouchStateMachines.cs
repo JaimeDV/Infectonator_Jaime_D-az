@@ -19,6 +19,7 @@ public class S_InfectTouchStateMachines : MonoBehaviour
 
     private void Start()
     {
+        first = true;
     }
 
     private void Update()
@@ -26,7 +27,7 @@ public class S_InfectTouchStateMachines : MonoBehaviour
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit, 100.0f))
         {
-           // Debug.Log(hit.transform.gameObject);
+           //Debug.Log(hit.transform.gameObject);
         }
         if (first && Input.GetMouseButton(0))
         {

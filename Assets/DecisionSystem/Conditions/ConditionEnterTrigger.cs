@@ -9,7 +9,8 @@ using static UnityEngine.EventSystems.EventTrigger;
 public class ConditionEnterTrigger : ICondition
 {
     public bool isNear;
-    public string preyTag;
+    public string TargetTag;
+    public string AlternativeTag;
     public override bool Test()
     {
         if (isNear)
@@ -20,8 +21,7 @@ public class ConditionEnterTrigger : ICondition
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.LogError("trigger!");
-        if (other.tag.Equals(preyTag))
+        if (other.tag.Equals(TargetTag))
         {
             isNear = true;
         }
