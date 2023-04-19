@@ -492,6 +492,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingHuman StateMachines (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 7976706820109346971, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
 --- !u!114 &78037986 stripped
@@ -928,6 +932,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingHuman StateMachines (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7976706820109346971, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
 --- !u!114 &222283993 stripped
@@ -1125,6 +1133,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingHuman StateMachines (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 7976706820109346971, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
 --- !u!1001 &293915921
@@ -1197,6 +1209,10 @@ PrefabInstance:
     - target: {fileID: 7976706820109346971, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
       propertyPath: m_Name
       value: MovingHuman StateMachines (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976706820109346971, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
@@ -1378,17 +1394,6 @@ MonoBehaviour:
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5634893651482591917, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
   m_PrefabInstance: {fileID: 823817926}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d79cb555aca3874994715c5a79af70d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &411619657 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5634893651482591917, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
-  m_PrefabInstance: {fileID: 5491939488757503795}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -1620,17 +1625,6 @@ Transform:
   m_Father: {fileID: 652277040}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &463713032 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3942695932503065985, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
-  m_PrefabInstance: {fileID: 5491939488757503795}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36b4ab2f7ce68436885973c95fae17a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &464549439 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5634893651482591917, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
@@ -1723,6 +1717,10 @@ PrefabInstance:
     - target: {fileID: 7976706820109346971, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
       propertyPath: m_Name
       value: MovingHuman StateMachines (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976706820109346971, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
@@ -1827,6 +1825,10 @@ PrefabInstance:
     - target: {fileID: 7976706820109346971, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
       propertyPath: m_Name
       value: MovingHuman StateMachines (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976706820109346971, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
@@ -2782,6 +2784,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingHuman StateMachines (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 7976706820109346971, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
 --- !u!114 &715288333 stripped
@@ -2960,6 +2966,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingHuman StateMachines (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 7976706820109346971, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
 --- !u!1001 &823817926
@@ -3032,6 +3042,10 @@ PrefabInstance:
     - target: {fileID: 7976706820109346971, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
       propertyPath: m_Name
       value: MovingHuman StateMachines (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976706820109346971, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
@@ -3170,6 +3184,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingHuman StateMachines (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 7976706820109346971, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
 --- !u!4 &891529588 stripped
@@ -3247,6 +3265,10 @@ PrefabInstance:
     - target: {fileID: 7976706820109346971, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
       propertyPath: m_Name
       value: MovingHuman StateMachines (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976706820109346971, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
@@ -3441,6 +3463,10 @@ PrefabInstance:
     - target: {fileID: 7976706820109346971, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
       propertyPath: m_Name
       value: MovingHuman StateMachines (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976706820109346971, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
@@ -3753,6 +3779,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingHuman StateMachines (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 7976706820109346971, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
 --- !u!114 &1216599493 stripped
@@ -3963,6 +3993,10 @@ PrefabInstance:
     - target: {fileID: 7976706820109346971, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
       propertyPath: m_Name
       value: MovingHuman StateMachines (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976706820109346971, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
@@ -4314,6 +4348,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingHuman StateMachines (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 7976706820109346971, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
 --- !u!1001 &1423425226
@@ -4458,6 +4496,10 @@ PrefabInstance:
     - target: {fileID: 7976706820109346971, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
       propertyPath: m_Name
       value: MovingHuman StateMachines (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976706820109346971, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
@@ -4817,6 +4859,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingHuman StateMachines (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7976706820109346971, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
 --- !u!1 &1605688316
@@ -5115,6 +5161,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingHuman StateMachines (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 7976706820109346971, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
 --- !u!114 &1700382019 stripped
@@ -5313,6 +5363,10 @@ PrefabInstance:
     - target: {fileID: 7976706820109346971, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
       propertyPath: m_Name
       value: MovingHuman StateMachines (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976706820109346971, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
@@ -5737,6 +5791,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingHuman StateMachines (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 7976706820109346971, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
 --- !u!114 &2035536014 stripped
@@ -5841,6 +5899,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingHuman StateMachines (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7976706820109346971, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
 --- !u!114 &2108585103 stripped
@@ -5910,22 +5972,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5491939489391764160, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
-      propertyPath: endActions.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5491939489391764160, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
-      propertyPath: endActions.Array.data[0]
-      value: 
-      objectReference: {fileID: 411619657}
-    - target: {fileID: 5491939489391764160, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
-      propertyPath: transitions.Array.data[1].priority
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5491939489391764160, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
-      propertyPath: transitions.Array.data[2].transition
-      value: 
-      objectReference: {fileID: 463713032}
     - target: {fileID: 7976706820109346971, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
       propertyPath: m_Name
       value: MovingHuman StateMachines
@@ -5944,6 +5990,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1584432419}
     m_Modifications:
+    - target: {fileID: 6527162213010084581, guid: 0e126993d5b29e94a92eb858324fc954, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6807597549618534032, guid: 0e126993d5b29e94a92eb858324fc954, type: 3}
       propertyPath: m_Name
       value: ' Moving Zombie StateMachine'
@@ -5998,4 +6048,5 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6807597550705510706, guid: 0e126993d5b29e94a92eb858324fc954, type: 3}
+    - {fileID: 6527162213010084581, guid: 0e126993d5b29e94a92eb858324fc954, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0e126993d5b29e94a92eb858324fc954, type: 3}
