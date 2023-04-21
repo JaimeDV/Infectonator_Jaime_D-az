@@ -37,6 +37,7 @@ public class ActionCallMethod : IAction
 		else
 		{
 			target.SendMessage(message, SendMessageOptions.DontRequireReceiver);
+			
 		}
 	}
 }

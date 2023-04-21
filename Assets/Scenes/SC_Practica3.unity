@@ -1438,6 +1438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 445724974}
   - component: {fileID: 445724973}
+  - component: {fileID: 445724975}
   m_Layer: 0
   m_Name: Actions
   m_TagString: Untagged
@@ -1478,6 +1479,21 @@ Transform:
   m_Father: {fileID: 682466028}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &445724975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445724972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb9217fa637cb43ac9fa7cd61840116a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventReceiver: {fileID: 0}
+  message: 
+  objectParameter: {fileID: 0}
 --- !u!4 &457927382 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1870944864929905895, guid: ced63f5a75777d94d8e873414a23d057, type: 3}
@@ -2386,9 +2402,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 682466028}
-  - component: {fileID: 682466027}
-  - component: {fileID: 682466026}
-  - component: {fileID: 682466025}
   m_Layer: 0
   m_Name: TestStates
   m_TagString: Untagged
@@ -2396,60 +2409,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &682466025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 682466024}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99030e21777414ff5962e105b385e8b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentState: {fileID: 0}
-  transitions: []
-  startActions: []
-  actions: []
-  endActions: []
---- !u!114 &682466026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 682466024}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99030e21777414ff5962e105b385e8b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentState: {fileID: 0}
-  transitions: []
-  startActions: []
-  actions: []
-  endActions: []
---- !u!114 &682466027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 682466024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99030e21777414ff5962e105b385e8b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentState: {fileID: 0}
-  transitions:
-  - priority: 0
-    transition: {fileID: 57283805}
-  startActions:
-  - {fileID: 445724973}
-  actions: []
-  endActions: []
 --- !u!4 &682466028
 Transform:
   m_ObjectHideFlags: 0
