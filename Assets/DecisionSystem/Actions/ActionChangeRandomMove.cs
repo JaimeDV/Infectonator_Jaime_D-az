@@ -14,6 +14,7 @@ public class ActionChangeRandomMove : IAction
     {
         if (deactivateInsted)
         {
+           
             if (moveScript != null)
             {
                 moveScript.enabled = false;

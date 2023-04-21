@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5935170909882898655}
   m_Layer: 2
   m_Name: 'ExitRange '
-  m_TagString: Untagged
+  m_TagString: human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 5334422818290594020}
   m_Layer: 6
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 968589867074339222}
   m_Layer: 6
   m_Name: DeadActions
-  m_TagString: Untagged
+  m_TagString: human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 5634893651482591917}
   m_Layer: 6
   m_Name: StopMoving
-  m_TagString: Untagged
+  m_TagString: human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 1094970048193120558}
   m_Layer: 6
   m_Name: Infected -> Dead
-  m_TagString: Untagged
+  m_TagString: human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -387,7 +387,7 @@ GameObject:
   - component: {fileID: 5064894886920576594}
   m_Layer: 6
   m_Name: StateDead
-  m_TagString: Untagged
+  m_TagString: human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -437,7 +437,7 @@ GameObject:
   - component: {fileID: 1515512947270537790}
   m_Layer: 6
   m_Name: StopRandom
-  m_TagString: Untagged
+  m_TagString: human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -483,7 +483,7 @@ GameObject:
   - component: {fileID: 2145371279512859576}
   m_Layer: 6
   m_Name: ReturnRandom
-  m_TagString: Untagged
+  m_TagString: human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5672,7 +5672,7 @@ GameObject:
   - component: {fileID: 7507825660911511661}
   m_Layer: 6
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5767,7 +5767,7 @@ GameObject:
   - component: {fileID: 3942695932503065985}
   m_Layer: 6
   m_Name: 'Wander -> Escape (HumanPanic) '
-  m_TagString: Untagged
+  m_TagString: human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5817,7 +5817,7 @@ GameObject:
   - component: {fileID: 5491939488883525629}
   m_Layer: 6
   m_Name: RandomMove
-  m_TagString: Untagged
+  m_TagString: human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5862,7 +5862,7 @@ GameObject:
   - component: {fileID: 5491939489060576317}
   m_Layer: 6
   m_Name: Escape -> Wander
-  m_TagString: Untagged
+  m_TagString: human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5913,7 +5913,7 @@ GameObject:
   - component: {fileID: 5491939489081871675}
   m_Layer: 6
   m_Name: Wander -> infected
-  m_TagString: Untagged
+  m_TagString: human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5976,7 +5976,7 @@ GameObject:
   - component: {fileID: 5491939489177071370}
   m_Layer: 6
   m_Name: StateRun
-  m_TagString: Untagged
+  m_TagString: human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6031,7 +6031,7 @@ GameObject:
   - component: {fileID: 5491939489391764160}
   m_Layer: 6
   m_Name: StateWander
-  m_TagString: Untagged
+  m_TagString: human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6088,7 +6088,7 @@ GameObject:
   - component: {fileID: 5491939489519438032}
   m_Layer: 6
   m_Name: WanderActions
-  m_TagString: Untagged
+  m_TagString: human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6123,7 +6123,7 @@ GameObject:
   - component: {fileID: 5491939489612021671}
   m_Layer: 6
   m_Name: Escape -> Infected
-  m_TagString: Untagged
+  m_TagString: human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6172,7 +6172,7 @@ GameObject:
   - component: {fileID: 5491939489651089634}
   m_Layer: 6
   m_Name: InfectActions
-  m_TagString: Untagged
+  m_TagString: human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6205,7 +6205,7 @@ GameObject:
   - component: {fileID: 5491939489784657631}
   m_Layer: 6
   m_Name: StateMAchine
-  m_TagString: Untagged
+  m_TagString: human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6273,7 +6273,7 @@ GameObject:
   - component: {fileID: 5491939489892633486}
   m_Layer: 6
   m_Name: StateInfected
-  m_TagString: Untagged
+  m_TagString: human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6325,7 +6325,7 @@ GameObject:
   - component: {fileID: 5491939489966247641}
   m_Layer: 6
   m_Name: Wander -> Escape (zombie)
-  m_TagString: Untagged
+  m_TagString: human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6375,7 +6375,7 @@ GameObject:
   - component: {fileID: 5491939490113106890}
   m_Layer: 6
   m_Name: PlayParticles
-  m_TagString: Untagged
+  m_TagString: human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6420,7 +6420,7 @@ GameObject:
   - component: {fileID: 5491939490358651235}
   m_Layer: 6
   m_Name: RunActions
-  m_TagString: Untagged
+  m_TagString: human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6454,7 +6454,7 @@ GameObject:
   - component: {fileID: 8264931546715139398}
   m_Layer: 2
   m_Name: InfectRange
-  m_TagString: Untagged
+  m_TagString: human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6514,7 +6514,7 @@ GameObject:
   - component: {fileID: 9165592924793423431}
   m_Layer: 6
   m_Name: BecomeZombie
-  m_TagString: Untagged
+  m_TagString: human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6562,7 +6562,7 @@ GameObject:
   - component: {fileID: 7591881475408564611}
   m_Layer: 2
   m_Name: RunRange
-  m_TagString: Untagged
+  m_TagString: human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6625,7 +6625,7 @@ MonoBehaviour:
   target: {fileID: 0}
   endpoint: {fileID: 5137328409616847338}
   runner: {fileID: 5137328408993431778}
-  speed: 2
+  speed: 3
   slowDownDistance: 0
   moveScript: {fileID: 5137328409640817233}
   TargetTag: Zombie

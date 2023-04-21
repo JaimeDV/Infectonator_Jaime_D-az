@@ -23,11 +23,20 @@ public class ConditionEnterTrigger : ICondition
     {
         if (other.tag.Equals(TargetTag))
         {
+            Debug.Log("valid " + this.gameObject.transform.parent.gameObject);
             isNear = true;
         }
     }
     private void OnTriggerExit(Collider other)
     {
         isNear = false;
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag.Equals(TargetTag))
+        {
+            Debug.Log("valid " + this.gameObject.transform.parent.gameObject);
+            isNear = true;
+        }
     }
 }

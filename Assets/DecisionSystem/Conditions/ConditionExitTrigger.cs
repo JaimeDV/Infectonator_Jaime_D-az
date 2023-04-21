@@ -20,6 +20,7 @@ public class ConditionExitTrigger : ICondition
     {
         if (other.tag.Equals(TargetTag))
         {
+            Debug.Log("leaving " + this.gameObject.transform.parent.gameObject);
             isNotNear = true;
         }
     }

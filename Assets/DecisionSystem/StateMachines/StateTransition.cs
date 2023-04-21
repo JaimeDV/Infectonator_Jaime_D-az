@@ -116,6 +116,7 @@ public class StateTransition : MonoBehaviour
 			if (targetState != null)
 			{
 				//targetState.enabled = true;
+				Debug.Log(transform.gameObject.name);
 				targetState.EnableState();
 			}
 			else
