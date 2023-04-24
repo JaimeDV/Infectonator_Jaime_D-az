@@ -56,7 +56,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 16
   worldSize: {x: 30, y: 30}
-  nodeRadius: 0.2
+  nodeRadius: 0.5
   distanceBetweenNodes: 0
 --- !u!114 &194949929266249078
 MonoBehaviour:
@@ -70,6 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6c4e9deba34430498151a46446499cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gridReference: {fileID: 194949929266249079}
   startPosition: {fileID: 7302298581624282409}
   targetPosition: {fileID: 194949930285430611}
 --- !u!114 &194949929266249077
