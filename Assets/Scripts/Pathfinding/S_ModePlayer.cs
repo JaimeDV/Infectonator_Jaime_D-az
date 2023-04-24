@@ -46,7 +46,7 @@ public class S_ModePlayer : MonoBehaviour
     private void Start()
     {
         calm = true;
-        //grid = GetComponent<Grid>();
+        grid = GetComponent<Grid>();
         finalPath = grid.FinalPath;
         CheckNode();
         velocity = Vector3.zero;

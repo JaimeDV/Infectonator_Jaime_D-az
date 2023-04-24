@@ -85,6 +85,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b0b75ad2c41304eb5ed6a4f6cc54bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grid: {fileID: 827603665839353394}
+  endPoint: {fileID: 0}
   player: {fileID: 827603666332564608}
   self: {fileID: 4863772467464451868}
   speed: 1

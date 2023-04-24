@@ -5914,6 +5914,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b0b75ad2c41304eb5ed6a4f6cc54bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grid: {fileID: 6807597550705510705}
+  endPoint: {fileID: 0}
   player: {fileID: 4150931084268546401}
   self: {fileID: 6093079609153391711}
   speed: 1
@@ -5931,6 +5933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faee65d7fd6615142ac26718dfb983a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grid: {fileID: 0}
   endpoint: {fileID: 6807597549954761492}
   timer: 0
   minTimer: 6

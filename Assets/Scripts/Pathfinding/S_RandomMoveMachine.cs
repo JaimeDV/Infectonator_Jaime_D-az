@@ -26,7 +26,7 @@ public class S_RandomMoveMachine : MonoBehaviour
 
     private void Start()
     {
-        //grid = GetComponent<Grid>();
+        grid = GetComponent<Grid>();
         calm = true;
     }
 
