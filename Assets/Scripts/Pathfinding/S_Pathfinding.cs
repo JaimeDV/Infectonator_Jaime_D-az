@@ -77,7 +77,7 @@ public class S_Pathfinding : MonoBehaviour {
 
 
 
-    void GetFinalPath(Node start, Node target)
+    public void GetFinalPath(Node start, Node target)
     {
         List<Node> finalPath = new List<Node>();
         Node cuarrent = target;
