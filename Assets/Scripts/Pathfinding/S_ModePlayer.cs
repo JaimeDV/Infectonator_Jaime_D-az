@@ -6,7 +6,12 @@ using UnityEngine;
 /// </summary>
 public class S_ModePlayer : MonoBehaviour
 {
+    [SerializeField]
     private Grid grid;
+
+    [SerializeField]
+    private GameObject endPoint;
+
     private Node cuarrentNode;
     private int nodePosition;
 
@@ -36,10 +41,12 @@ public class S_ModePlayer : MonoBehaviour
     private Vector3 cuarrentNodeDistance;
     private Vector3 velocity;
 
+    public static System.Action <Vector3, Vector3> generateFinal;
+
     private void Start()
     {
         calm = true;
-        grid = GetComponent<Grid>();
+        //grid = GetComponent<Grid>();
         finalPath = grid.FinalPath;
         CheckNode();
         velocity = Vector3.zero;
@@ -53,15 +60,16 @@ public class S_ModePlayer : MonoBehaviour
             startDelay += Time.deltaTime;
             if (startDelay > 5)
             {
-                grid = GetComponent<Grid>();
+                //grid = GetComponent<Grid>();
                 finalPath = grid.FinalPath;
+                //finalPath = S_Pathfinding.
                 CheckNode();
             }
             MoveToTarget();
         }
         else if (human)
         {
-            grid = GetComponent<Grid>();
+            //grid = GetComponent<Grid>();
             finalPath = grid.FinalPath;
             CheckNode();
             MoveToTarget();

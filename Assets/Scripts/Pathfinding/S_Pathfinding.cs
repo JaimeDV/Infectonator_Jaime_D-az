@@ -1,17 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class S_Pathfinding : MonoBehaviour {
-
+public class S_Pathfinding : MonoBehaviour
+{
     [SerializeField]
-    Grid gridReference;
+    private Grid gridReference;
+
     public Transform startPosition;
     public Transform targetPosition;
 
     private void Awake()
     {
-        gridReference = GetComponent<Grid>();
+        //gridReference = GetComponent<Grid>();
     }
 
     private void Update()
@@ -19,7 +19,7 @@ public class S_Pathfinding : MonoBehaviour {
         FindPath(startPosition.position, targetPosition.position);
     }
 
-    void FindPath(Vector3 starter, Vector3 target)
+    public void FindPath(Vector3 starter, Vector3 target)
     {
         Node startNode = gridReference.NodeFromWorldPoint(starter);
         Node targetNode = gridReference.NodeFromWorldPoint(target);
@@ -29,10 +29,10 @@ public class S_Pathfinding : MonoBehaviour {
 
         OpenList.Add(startNode);
 
-        while(OpenList.Count > 0)
+        while (OpenList.Count > 0)
         {
             Node CurrentNode = OpenList[0];
-            for(int i = 1; i < OpenList.Count; i++)
+            for (int i = 1; i < OpenList.Count; i++)
             {
                 if (OpenList[i].FCost < CurrentNode.FCost || OpenList[i].FCost == CurrentNode.FCost && OpenList[i].ihCost < CurrentNode.ihCost)//If the f cost of that object is less than or equal to the f cost of the current node
                 {
@@ -65,24 +65,21 @@ public class S_Pathfinding : MonoBehaviour {
                     NeighborNode.ihCost = GetManhattenDistance(NeighborNode, targetNode);
                     NeighborNode.parentNode = CurrentNode;
 
-                    if(!OpenList.Contains(NeighborNode))
+                    if (!OpenList.Contains(NeighborNode))
                     {
                         OpenList.Add(NeighborNode);
                     }
                 }
             }
-
         }
     }
 
-
-
-    void GetFinalPath(Node start, Node target)
+    public void GetFinalPath(Node start, Node target)
     {
         List<Node> finalPath = new List<Node>();
         Node cuarrent = target;
 
-        while(cuarrent != start)
+        while (cuarrent != start)
         {
             finalPath.Add(cuarrent);
             cuarrent = cuarrent.parentNode;
@@ -91,10 +88,9 @@ public class S_Pathfinding : MonoBehaviour {
         finalPath.Reverse();
 
         gridReference.FinalPath = finalPath;
-
     }
 
-    int GetManhattenDistance(Node a_nodeA, Node a_nodeB)
+    private int GetManhattenDistance(Node a_nodeA, Node a_nodeB)
     {
         int ix = Mathf.Abs(a_nodeA.gridX - a_nodeB.gridX);
         int iy = Mathf.Abs(a_nodeA.gridY - a_nodeB.gridY);

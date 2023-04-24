@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class S_RandomMoveMachine : MonoBehaviour
 {
+    [SerializeField]
     private Grid grid;
 
     [SerializeField]
@@ -25,7 +26,7 @@ public class S_RandomMoveMachine : MonoBehaviour
 
     private void Start()
     {
-        grid = GetComponent<Grid>();
+        //grid = GetComponent<Grid>();
         calm = true;
     }
 
