@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class S_Pathfinding : MonoBehaviour {
 
+    [SerializeField]
     Grid gridReference;
     public Transform startPosition;
     public Transform targetPosition;
